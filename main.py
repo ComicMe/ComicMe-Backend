@@ -40,7 +40,7 @@ def generate_image():
     response = requests.post(url, headers=headers, files=files)
 
     print("API Response:", response.json())
-    
+
     if response.status_code == 200:
         return jsonify({"image_url": response.json().get("image_url")})
     
